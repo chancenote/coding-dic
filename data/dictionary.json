@@ -1,0 +1,604 @@
+{
+  "terms": [
+    {
+      "id": "variable",
+      "term": "변수 (Variable)",
+      "aliases": ["변수", "variable"],
+      "category": "기본개념",
+      "definition": "데이터를 저장하는 이름이 붙은 공간입니다. 숫자, 문자, 참/거짓 등 다양한 값을 담아둘 수 있습니다. 프로그램이 실행되는 동안 값을 바꿀 수도 있습니다.",
+      "analogy": "마치 이름표가 붙은 상자와 같아요. 상자에 '내 나이'라고 이름을 붙이고, 그 안에 숫자 12를 넣어두면 나중에 꺼내 쓸 수 있는 것처럼요.",
+      "example": "let myName = \"홍길동\";\nlet age = 12;\nconsole.log(myName + \"은 \" + age + \"살입니다.\");",
+      "related": ["함수", "객체", "조건문"]
+    },
+    {
+      "id": "function",
+      "term": "함수 (Function)",
+      "aliases": ["함수", "function"],
+      "category": "기본개념",
+      "definition": "특정 작업을 수행하는 코드 묶음에 이름을 붙인 것입니다. 한 번 만들어 두면 필요할 때마다 이름을 불러서 재사용할 수 있습니다. 입력값을 받아서 결과를 돌려줄 수도 있습니다.",
+      "analogy": "마치 레시피와 같아요. '김치찌개 만들기'라는 레시피를 한 번 적어두면, 김치찌개가 먹고 싶을 때마다 그 레시피를 꺼내서 따라 하면 되는 것처럼요.",
+      "example": "function greet(name) {\n  return \"안녕하세요, \" + name + \"님!\";\n}\nconsole.log(greet(\"민수\"));",
+      "related": ["변수", "모듈", "클래스"]
+    },
+    {
+      "id": "object",
+      "term": "객체 (Object)",
+      "aliases": ["객체", "object"],
+      "category": "기본개념",
+      "definition": "관련 있는 데이터와 기능을 하나로 묶어놓은 것입니다. 이름(키)과 값의 쌍으로 정보를 저장합니다. 현실 세계의 사물을 코드로 표현할 때 유용합니다.",
+      "analogy": "마치 학생증과 같아요. 학생증 하나에 이름, 학교, 학년, 반, 사진 등 여러 정보가 함께 담겨 있는 것처럼, 객체도 여러 정보를 하나로 묶어 담아요.",
+      "example": "let student = {\n  name: \"김민수\",\n  age: 13,\n  school: \"코딩중학교\"\n};\nconsole.log(student.name);",
+      "related": ["클래스", "배열", "JSON"]
+    },
+    {
+      "id": "array",
+      "term": "배열 (Array)",
+      "aliases": ["배열", "array"],
+      "category": "기본개념",
+      "definition": "같은 종류의 데이터를 순서대로 나열해서 저장하는 자료구조입니다. 각 데이터는 번호(인덱스)로 접근할 수 있으며, 0번부터 시작합니다. 목록 형태의 데이터를 다룰 때 사용합니다.",
+      "analogy": "마치 사물함 한 줄과 같아요. 1번부터 순서대로 번호가 매겨진 사물함에 물건을 넣어두고, 번호를 말하면 바로 그 칸의 물건을 꺼낼 수 있는 것처럼요.",
+      "example": "let fruits = [\"사과\", \"바나나\", \"포도\"];\nconsole.log(fruits[0]);\nfruits.push(\"딸기\");\nconsole.log(fruits.length);",
+      "related": ["변수", "반복문", "객체"]
+    },
+    {
+      "id": "loop",
+      "term": "반복문 (Loop)",
+      "aliases": ["반복문", "loop"],
+      "category": "기본개념",
+      "definition": "같은 작업을 여러 번 반복해서 실행하는 코드 구조입니다. for, while 등의 키워드를 사용하며, 조건이 만족되는 동안 계속 실행됩니다. 배열의 모든 요소를 처리할 때 자주 사용합니다.",
+      "analogy": "마치 운동장 돌기와 같아요. 선생님이 '운동장 5바퀴 돌아!'라고 하면 같은 트랙을 5번 반복해서 도는 것처럼, 반복문도 같은 코드를 정해진 횟수만큼 반복해요.",
+      "example": "for (let i = 1; i <= 5; i++) {\n  console.log(i + \"번째 반복입니다.\");\n}",
+      "related": ["배열", "조건문", "변수"]
+    },
+    {
+      "id": "conditional",
+      "term": "조건문 (Conditional)",
+      "aliases": ["조건문", "conditional"],
+      "category": "기본개념",
+      "definition": "조건에 따라 다른 코드를 실행하는 구조입니다. if, else if, else 키워드를 사용하여 여러 갈래의 실행 경로를 만들 수 있습니다. 프로그램에 판단력을 부여하는 핵심 문법입니다.",
+      "analogy": "마치 갈림길의 이정표와 같아요. '비가 오면 우산을 가져가고, 안 오면 그냥 나가자'처럼 상황에 따라 다른 선택을 하는 것과 같아요.",
+      "example": "let score = 85;\nif (score >= 90) {\n  console.log(\"A등급\");\n} else if (score >= 80) {\n  console.log(\"B등급\");\n} else {\n  console.log(\"C등급\");\n}",
+      "related": ["변수", "반복문", "함수"]
+    },
+    {
+      "id": "class",
+      "term": "클래스 (Class)",
+      "aliases": ["클래스", "class"],
+      "category": "기본개념",
+      "definition": "객체를 만들기 위한 설계도입니다. 클래스를 정의하면 같은 구조의 객체를 여러 개 쉽게 만들 수 있습니다. 속성(데이터)과 메서드(기능)를 함께 정의합니다.",
+      "analogy": "마치 붕어빵 틀과 같아요. 틀 하나를 만들어 두면 같은 모양의 붕어빵을 얼마든지 찍어낼 수 있는 것처럼, 클래스 하나로 같은 구조의 객체를 여러 개 만들 수 있어요.",
+      "example": "class Animal {\n  constructor(name, sound) {\n    this.name = name;\n    this.sound = sound;\n  }\n  speak() {\n    console.log(this.name + \"이(가) \" + this.sound + \" 소리를 냅니다.\");\n  }\n}",
+      "related": ["객체", "함수", "모듈"]
+    },
+    {
+      "id": "module",
+      "term": "모듈 (Module)",
+      "aliases": ["모듈", "module"],
+      "category": "기본개념",
+      "definition": "코드를 기능별로 나눠서 별도의 파일로 관리하는 방식입니다. 필요한 기능만 가져다 쓸 수 있어서 코드를 깔끔하게 정리할 수 있습니다. import와 export 키워드를 사용합니다.",
+      "analogy": "마치 레고 블록과 같아요. 각 블록(모듈)이 독립적으로 만들어져 있고, 필요한 블록만 골라서 조립하면 원하는 작품을 만들 수 있는 것처럼요.",
+      "example": "// math.js 파일에서 내보내기\nexport function add(a, b) {\n  return a + b;\n}\n// main.js 파일에서 가져오기\nimport { add } from './math.js';",
+      "related": ["패키지", "라이브러리", "함수"]
+    },
+    {
+      "id": "package",
+      "term": "패키지 (Package)",
+      "aliases": ["패키지", "package"],
+      "category": "기본개념",
+      "definition": "여러 모듈을 묶어서 하나의 단위로 배포한 것입니다. npm 같은 패키지 관리자를 통해 다른 사람이 만든 패키지를 쉽게 설치하고 사용할 수 있습니다. package.json 파일로 관리됩니다.",
+      "analogy": "마치 택배 상자와 같아요. 여러 물건(모듈)을 하나의 상자에 담아서 보내면, 받는 사람은 상자를 열어서 필요한 물건을 꺼내 쓰는 것처럼요.",
+      "example": "// package.json 예시\n// npm install axios 명령어로 설치\nconst axios = require('axios');\naxios.get('https://api.example.com/data');",
+      "related": ["모듈", "npm", "라이브러리"]
+    },
+    {
+      "id": "library",
+      "term": "라이브러리 (Library)",
+      "aliases": ["라이브러리", "library"],
+      "category": "기본개념",
+      "definition": "자주 사용되는 기능들을 미리 만들어서 모아놓은 코드 모음입니다. 필요한 기능을 직접 만들지 않고 라이브러리에서 가져다 쓸 수 있습니다. 개발 시간을 크게 절약해 줍니다.",
+      "analogy": "마치 도서관과 같아요. 책을 직접 쓸 필요 없이 도서관에 가서 필요한 책을 빌려 읽을 수 있는 것처럼, 라이브러리에서 필요한 기능을 가져다 쓸 수 있어요.",
+      "example": "// lodash 라이브러리 사용 예시\nconst _ = require('lodash');\nlet numbers = [3, 1, 4, 1, 5];\nlet sorted = _.sortBy(numbers);\nconsole.log(sorted);",
+      "related": ["프레임워크", "패키지", "모듈"]
+    },
+    {
+      "id": "framework",
+      "term": "프레임워크 (Framework)",
+      "aliases": ["프레임워크", "framework"],
+      "category": "기본개념",
+      "definition": "애플리케이션의 전체 구조와 규칙을 제공하는 개발 도구입니다. 라이브러리와 달리 프레임워크가 정한 방식대로 코드를 작성해야 합니다. React, Next.js, Express 등이 대표적입니다.",
+      "analogy": "마치 집의 뼈대(골조)와 같아요. 건설회사가 기본 뼈대를 세워주면, 우리는 그 안에서 벽지, 가구 등을 자유롭게 꾸미는 것처럼, 프레임워크가 기본 구조를 제공하고 우리는 그 안에서 개발해요.",
+      "example": "// Express 프레임워크 예시\nconst express = require('express');\nconst app = express();\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});",
+      "related": ["라이브러리", "React", "Next.js"]
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "aliases": ["에이피아이", "api"],
+      "category": "기본개념",
+      "definition": "Application Programming Interface의 약자로, 프로그램끼리 서로 대화하는 방법을 정해놓은 규칙입니다. 다른 서비스의 기능이나 데이터를 가져올 때 사용합니다. 요청을 보내면 정해진 형식으로 응답을 받습니다.",
+      "analogy": "마치 식당의 메뉴판과 같아요. 손님(프로그램)이 메뉴판(API 문서)을 보고 주문(요청)하면, 주방(서버)에서 음식(데이터)을 만들어서 가져다주는 것처럼요.",
+      "example": "// 날씨 API 호출 예시\nfetch('https://api.weather.com/today')\n  .then(response => response.json())\n  .then(data => console.log(data.temperature));",
+      "related": ["REST API", "JSON", "서버"]
+    },
+    {
+      "id": "sdk",
+      "term": "SDK",
+      "aliases": ["에스디케이", "sdk"],
+      "category": "기본개념",
+      "definition": "Software Development Kit의 약자로, 특정 플랫폼이나 서비스용 앱을 개발하기 위한 도구 모음입니다. API, 라이브러리, 문서, 예제 코드 등이 포함되어 있습니다. 개발을 빠르게 시작할 수 있도록 도와줍니다.",
+      "analogy": "마치 미술 도구 세트와 같아요. 붓, 물감, 팔레트, 캔버스가 한 세트로 들어있어서 바로 그림을 그릴 수 있는 것처럼, SDK에는 개발에 필요한 모든 도구가 들어있어요.",
+      "example": "// Firebase SDK 사용 예시\nimport { initializeApp } from 'firebase/app';\nconst app = initializeApp({\n  apiKey: \"my-api-key\",\n  projectId: \"my-project\"\n});",
+      "related": ["API", "라이브러리", "패키지"]
+    },
+    {
+      "id": "ide",
+      "term": "IDE",
+      "aliases": ["아이디이", "ide"],
+      "category": "기본개념",
+      "definition": "Integrated Development Environment의 약자로, 코드를 작성하고 실행하고 디버깅할 수 있는 통합 개발 환경입니다. VS Code, IntelliJ 등이 대표적입니다. 코드 자동완성, 오류 표시 등 편리한 기능을 제공합니다.",
+      "analogy": "마치 요리사의 주방과 같아요. 칼, 도마, 냄비, 오븐 등 요리에 필요한 모든 도구가 한 곳에 갖춰져 있는 것처럼, IDE에는 코딩에 필요한 모든 도구가 한 프로그램 안에 들어있어요.",
+      "example": "// VS Code에서 코드를 작성하면\n// 자동완성 기능이 도와줍니다\nconsole.log(\"IDE에서 코딩하면 편리해요!\");\n// Ctrl+S로 저장, F5로 실행",
+      "related": ["터미널", "디버깅", "Git"]
+    },
+    {
+      "id": "git",
+      "term": "Git",
+      "aliases": ["깃", "git"],
+      "category": "기본개념",
+      "definition": "코드의 변경 이력을 추적하고 관리하는 버전 관리 시스템입니다. 여러 사람이 동시에 같은 프로젝트를 개발할 때 필수적입니다. GitHub와 함께 사용하면 온라인에서 코드를 공유할 수 있습니다.",
+      "analogy": "마치 문서의 '변경 내역 추적' 기능과 같아요. 워드 문서에서 누가 언제 어떤 내용을 수정했는지 기록되는 것처럼, Git은 코드의 모든 변경 사항을 기록해요.",
+      "example": "// Git 명령어 (터미널에서 사용)\n// git init - 저장소 생성\n// git add . - 변경사항 추가\n// git commit -m \"첫 번째 커밋\"\n// git push origin main",
+      "related": ["커밋", "브랜치", "머지"]
+    },
+    {
+      "id": "commit",
+      "term": "커밋 (Commit)",
+      "aliases": ["커밋", "commit"],
+      "category": "기본개념",
+      "definition": "Git에서 코드의 변경 사항을 저장하는 행위입니다. 각 커밋에는 메시지를 붙여서 어떤 변경을 했는지 설명합니다. 커밋을 하면 나중에 그 시점으로 돌아갈 수 있습니다.",
+      "analogy": "마치 게임의 세이브 포인트와 같아요. 게임에서 중요한 지점마다 저장해두면 실패했을 때 그 지점으로 돌아갈 수 있는 것처럼, 커밋도 코드의 중요한 시점을 저장해둬요.",
+      "example": "// 터미널에서 Git 커밋하기\n// git add index.js\n// git commit -m \"로그인 기능 추가\"\nconsole.log(\"이 코드를 커밋합니다!\");",
+      "related": ["Git", "푸시", "브랜치"]
+    },
+    {
+      "id": "push",
+      "term": "푸시 (Push)",
+      "aliases": ["푸시", "push"],
+      "category": "기본개념",
+      "definition": "로컬(내 컴퓨터)에서 작업한 커밋을 원격 저장소(GitHub 등)로 올리는 것입니다. 푸시를 해야 다른 팀원들이 내 코드를 볼 수 있습니다. git push 명령어를 사용합니다.",
+      "analogy": "마치 편지를 우체통에 넣는 것과 같아요. 편지(코드 변경사항)를 다 쓴 후 우체통(원격 저장소)에 넣어야 상대방이 받아볼 수 있는 것처럼요.",
+      "example": "// 터미널에서 푸시하기\n// git push origin main\nconsole.log(\"내 코드를 GitHub에 올렸어요!\");\n// origin: 원격 저장소 이름\n// main: 브랜치 이름",
+      "related": ["커밋", "풀", "Git"]
+    },
+    {
+      "id": "pull",
+      "term": "풀 (Pull)",
+      "aliases": ["풀", "pull"],
+      "category": "기본개념",
+      "definition": "원격 저장소(GitHub 등)에 있는 최신 코드를 내 컴퓨터로 가져오는 것입니다. 다른 사람이 올린 코드를 받아볼 때 사용합니다. git pull 명령어를 사용합니다.",
+      "analogy": "마치 우체부가 가져다준 편지를 받는 것과 같아요. 다른 사람이 보낸 편지(코드 변경사항)가 도착하면 우편함에서 꺼내 읽는 것처럼, 풀은 다른 사람의 코드를 내 컴퓨터로 가져와요.",
+      "example": "// 터미널에서 풀하기\n// git pull origin main\nconsole.log(\"최신 코드를 받아왔어요!\");\n// 팀원이 올린 변경사항을 내 컴퓨터에 적용",
+      "related": ["푸시", "커밋", "머지"]
+    },
+    {
+      "id": "branch",
+      "term": "브랜치 (Branch)",
+      "aliases": ["브랜치", "branch"],
+      "category": "기본개념",
+      "definition": "메인 코드에서 분리된 독립적인 작업 공간입니다. 새로운 기능을 개발하거나 버그를 수정할 때 브랜치를 만들어 작업합니다. 완성되면 메인 브랜치에 합칠 수 있습니다.",
+      "analogy": "마치 나뭇가지와 같아요. 큰 줄기(메인 코드)에서 가지(브랜치)가 갈라져 나가 각자 자라다가, 다시 합칠 수 있는 것처럼요. 각 가지에서 독립적으로 작업할 수 있어요.",
+      "example": "// 터미널에서 브랜치 만들기\n// git branch new-feature\n// git checkout new-feature\nconsole.log(\"새 브랜치에서 작업 중!\");\n// git checkout main (메인으로 돌아가기)",
+      "related": ["머지", "Git", "커밋"]
+    },
+    {
+      "id": "merge",
+      "term": "머지 (Merge)",
+      "aliases": ["머지", "merge"],
+      "category": "기본개념",
+      "definition": "두 개의 브랜치를 하나로 합치는 작업입니다. 기능 개발이 완료된 브랜치를 메인 브랜치에 머지하여 통합합니다. 같은 부분을 수정했다면 충돌(conflict)이 발생할 수 있습니다.",
+      "analogy": "마치 모둠 과제를 합치는 것과 같아요. 각자 맡은 부분을 따로 작성한 후 마지막에 하나의 보고서로 합치는 것처럼, 머지는 각각의 브랜치에서 작업한 코드를 하나로 합쳐요.",
+      "example": "// 터미널에서 머지하기\n// git checkout main\n// git merge new-feature\nconsole.log(\"기능 브랜치를 메인에 합쳤어요!\");",
+      "related": ["브랜치", "풀", "Git"]
+    },
+    {
+      "id": "html",
+      "term": "HTML",
+      "aliases": ["에이치티엠엘", "html"],
+      "category": "웹개발",
+      "definition": "HyperText Markup Language의 약자로, 웹페이지의 구조를 만드는 언어입니다. 제목, 문단, 이미지, 링크 등 웹페이지의 뼈대를 정의합니다. 모든 웹사이트의 기초가 되는 필수 기술입니다.",
+      "analogy": "마치 건물의 뼈대(골격)와 같아요. 건물을 지을 때 먼저 기둥과 벽의 위치를 잡는 것처럼, HTML은 웹페이지에서 글, 그림, 버튼 등이 어디에 위치할지 뼈대를 만들어요.",
+      "example": "// HTML 기본 구조\n// <h1>제목입니다</h1>\n// <p>문단입니다</p>\n// <img src=\"photo.jpg\" />\ndocument.body.innerHTML = \"<h1>안녕하세요!</h1>\";",
+      "related": ["CSS", "JavaScript", "DOM"]
+    },
+    {
+      "id": "css",
+      "term": "CSS",
+      "aliases": ["씨에스에스", "css"],
+      "category": "웹개발",
+      "definition": "Cascading Style Sheets의 약자로, 웹페이지의 디자인과 스타일을 담당하는 언어입니다. 색상, 크기, 배치, 글꼴 등 시각적인 모든 요소를 꾸밉니다. HTML과 항상 함께 사용됩니다.",
+      "analogy": "마치 건물의 인테리어와 같아요. 뼈대(HTML)가 완성된 건물에 벽지를 바르고, 페인트를 칠하고, 가구를 배치하는 것처럼, CSS는 웹페이지를 예쁘게 꾸며요.",
+      "example": "// CSS를 JavaScript로 적용하기\nlet title = document.querySelector('h1');\ntitle.style.color = 'blue';\ntitle.style.fontSize = '24px';\ntitle.style.textAlign = 'center';",
+      "related": ["HTML", "JavaScript", "컴포넌트"]
+    },
+    {
+      "id": "javascript",
+      "term": "JavaScript",
+      "aliases": ["자바스크립트", "javascript"],
+      "category": "웹개발",
+      "definition": "웹페이지에 동적인 기능을 추가하는 프로그래밍 언어입니다. 버튼 클릭, 애니메이션, 데이터 처리 등을 구현할 수 있습니다. 현재 가장 널리 쓰이는 프로그래밍 언어 중 하나입니다.",
+      "analogy": "마치 건물의 전기 시스템과 같아요. 스위치를 누르면 불이 켜지고, 버튼을 누르면 엘리베이터가 움직이는 것처럼, JavaScript는 웹페이지에서 사용자의 행동에 반응하고 동작하게 만들어요.",
+      "example": "let button = document.querySelector('button');\nbutton.addEventListener('click', () => {\n  alert('버튼을 클릭했어요!');\n});",
+      "related": ["HTML", "CSS", "TypeScript"]
+    },
+    {
+      "id": "typescript",
+      "term": "TypeScript",
+      "aliases": ["타입스크립트", "typescript"],
+      "category": "웹개발",
+      "definition": "JavaScript에 타입(자료형) 기능을 추가한 프로그래밍 언어입니다. 변수나 함수에 어떤 종류의 데이터가 들어갈지 미리 정할 수 있습니다. 코드의 오류를 실행 전에 미리 발견할 수 있어 대규모 프로젝트에 유용합니다.",
+      "analogy": "마치 분리수거 쓰레기통과 같아요. '플라스틱', '종이', '캔' 등 종류별로 정해진 통에 넣어야 하는 것처럼, TypeScript는 각 변수에 어떤 종류의 값만 넣을 수 있는지 미리 정해놓아요.",
+      "example": "// TypeScript 예시\nlet name: string = \"민수\";\nlet age: number = 13;\nfunction greet(name: string): string {\n  return \"안녕, \" + name;\n}",
+      "related": ["JavaScript", "React", "Next.js"]
+    },
+    {
+      "id": "react",
+      "term": "React",
+      "aliases": ["리액트", "react"],
+      "category": "웹개발",
+      "definition": "Facebook(Meta)이 만든 UI 구축용 JavaScript 라이브러리입니다. 컴포넌트 단위로 화면을 구성하며, 데이터가 변경되면 화면을 자동으로 업데이트합니다. 현재 가장 인기 있는 프론트엔드 기술 중 하나입니다.",
+      "analogy": "마치 레고 조립과 같아요. 작은 레고 블록(컴포넌트)을 하나씩 만들고, 이것들을 조합하면 멋진 작품(웹페이지)이 완성되는 것처럼요. 블록 하나를 바꾸면 그 부분만 업데이트돼요.",
+      "example": "function Welcome({ name }) {\n  return <h1>안녕하세요, {name}님!</h1>;\n}\n// <Welcome name=\"민수\" />",
+      "related": ["컴포넌트", "props", "state"]
+    },
+    {
+      "id": "nextjs",
+      "term": "Next.js",
+      "aliases": ["넥스트제이에스", "nextjs"],
+      "category": "웹개발",
+      "definition": "React 기반의 풀스택 웹 프레임워크입니다. 서버 사이드 렌더링(SSR), 정적 사이트 생성, 파일 기반 라우팅 등 편리한 기능을 제공합니다. Vercel에서 개발하고 유지보수합니다.",
+      "analogy": "마치 레고에 설명서가 포함된 프리미엄 세트와 같아요. 레고(React)만으로도 만들 수 있지만, 설명서와 특수 부품이 포함된 세트(Next.js)를 쓰면 더 멋진 작품을 쉽게 만들 수 있는 것처럼요.",
+      "example": "// app/page.js (Next.js App Router)\nexport default function Home() {\n  return <h1>내 첫 번째 Next.js 앱!</h1>;\n}",
+      "related": ["React", "SSR", "라우팅"]
+    },
+    {
+      "id": "nodejs",
+      "term": "Node.js",
+      "aliases": ["노드제이에스", "nodejs"],
+      "category": "웹개발",
+      "definition": "JavaScript를 브라우저 밖에서도 실행할 수 있게 해주는 런타임 환경입니다. 서버를 만들거나 파일을 처리하는 등 백엔드 개발이 가능합니다. npm 패키지 생태계와 함께 사용됩니다.",
+      "analogy": "마치 교실 밖으로 나온 학생과 같아요. 원래 교실(브라우저)에서만 공부하던 학생(JavaScript)이 운동장, 도서관 등 어디서든(서버) 활동할 수 있게 된 것처럼요.",
+      "example": "const http = require('http');\nconst server = http.createServer((req, res) => {\n  res.end('Hello from Node.js!');\n});\nserver.listen(3000);",
+      "related": ["npm", "JavaScript", "백엔드"]
+    },
+    {
+      "id": "npm",
+      "term": "npm",
+      "aliases": ["엔피엠", "npm"],
+      "category": "웹개발",
+      "definition": "Node Package Manager의 약자로, JavaScript 패키지를 설치하고 관리하는 도구입니다. 전 세계 개발자들이 만든 수백만 개의 패키지를 무료로 사용할 수 있습니다. package.json 파일로 프로젝트의 패키지를 관리합니다.",
+      "analogy": "마치 앱스토어와 같아요. 스마트폰에서 앱스토어를 통해 필요한 앱을 검색하고 설치하는 것처럼, npm으로 필요한 코드 패키지를 검색하고 설치할 수 있어요.",
+      "example": "// 터미널에서 npm 사용하기\n// npm init - 프로젝트 시작\n// npm install react - 패키지 설치\n// npm run dev - 개발 서버 실행\nconsole.log(\"npm으로 패키지를 관리해요!\");",
+      "related": ["패키지", "Node.js", "라이브러리"]
+    },
+    {
+      "id": "component",
+      "term": "컴포넌트 (Component)",
+      "aliases": ["컴포넌트", "component"],
+      "category": "웹개발",
+      "definition": "UI를 구성하는 독립적이고 재사용 가능한 코드 조각입니다. 버튼, 카드, 헤더 등 화면의 각 부분을 컴포넌트로 만듭니다. React에서는 함수형 컴포넌트를 주로 사용합니다.",
+      "analogy": "마치 조립식 가구의 부품과 같아요. 서랍, 선반, 문짝 등 각 부품이 독립적으로 만들어져 있고, 이것들을 조합하면 책장, 옷장 등 다양한 가구를 만들 수 있는 것처럼요.",
+      "example": "function Button({ text, onClick }) {\n  return (\n    <button onClick={onClick}>{text}</button>\n  );\n}\n// <Button text=\"클릭!\" onClick={handleClick} />",
+      "related": ["React", "props", "state"]
+    },
+    {
+      "id": "props",
+      "term": "props",
+      "aliases": ["프롭스", "props"],
+      "category": "웹개발",
+      "definition": "부모 컴포넌트가 자식 컴포넌트에 전달하는 데이터입니다. Properties의 줄임말이며, 읽기 전용으로 자식이 직접 수정할 수 없습니다. 컴포넌트를 재사용 가능하게 만들어 줍니다.",
+      "analogy": "마치 부모님이 자녀에게 주는 용돈 봉투와 같아요. 봉투(props)에 금액(데이터)이 적혀 있고, 자녀는 그 용돈을 쓸 수 있지만 봉투에 적힌 금액 자체를 바꿀 수는 없는 것처럼요.",
+      "example": "function Profile({ name, age }) {\n  return <p>{name}님은 {age}살입니다.</p>;\n}\n// <Profile name=\"민수\" age={13} />",
+      "related": ["컴포넌트", "state", "React"]
+    },
+    {
+      "id": "state",
+      "term": "state",
+      "aliases": ["스테이트", "state"],
+      "category": "웹개발",
+      "definition": "컴포넌트 내부에서 관리하는 변경 가능한 데이터입니다. state가 변경되면 React가 자동으로 화면을 다시 그립니다. useState 훅을 사용하여 함수형 컴포넌트에서 관리합니다.",
+      "analogy": "마치 교실의 점수판과 같아요. 점수(state)가 바뀔 때마다 점수판(화면)이 자동으로 업데이트되는 것처럼, state가 변하면 화면도 자동으로 바뀌어요.",
+      "example": "import { useState } from 'react';\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>클릭: {count}</button>;\n}",
+      "related": ["props", "컴포넌트", "React"]
+    },
+    {
+      "id": "routing",
+      "term": "라우팅 (Routing)",
+      "aliases": ["라우팅", "routing"],
+      "category": "웹개발",
+      "definition": "URL 주소에 따라 다른 페이지나 화면을 보여주는 기술입니다. 사용자가 주소를 바꾸면 해당 페이지로 이동합니다. Next.js에서는 폴더 구조로 자동 라우팅이 가능합니다.",
+      "analogy": "마치 건물의 안내 표지판과 같아요. '1층 → 카페, 2층 → 사무실, 3층 → 회의실'처럼 주소(URL)에 따라 목적지(페이지)를 안내해주는 것과 같아요.",
+      "example": "// Next.js 파일 기반 라우팅\n// app/page.js → / (홈)\n// app/about/page.js → /about\n// app/blog/[id]/page.js → /blog/1, /blog/2\nconsole.log(\"URL에 따라 페이지가 바뀌어요!\");",
+      "related": ["Next.js", "SPA", "컴포넌트"]
+    },
+    {
+      "id": "ssr",
+      "term": "SSR",
+      "aliases": ["에스에스알", "ssr"],
+      "category": "웹개발",
+      "definition": "Server Side Rendering의 약자로, 서버에서 HTML을 완성해서 브라우저에 보내는 방식입니다. 초기 로딩이 빠르고 검색엔진 최적화(SEO)에 유리합니다. Next.js에서 기본적으로 지원합니다.",
+      "analogy": "마치 식당에서 완성된 음식을 가져다주는 것과 같아요. 주방(서버)에서 음식(HTML)을 다 만들어서 테이블(브라우저)에 가져다주면 바로 먹을(볼) 수 있는 것처럼요.",
+      "example": "// Next.js SSR 예시\nexport default async function Page() {\n  const data = await fetch('https://api.example.com/data');\n  const posts = await data.json();\n  return <div>{posts.map(p => <p key={p.id}>{p.title}</p>)}</div>;\n}",
+      "related": ["CSR", "Next.js", "서버"]
+    },
+    {
+      "id": "csr",
+      "term": "CSR",
+      "aliases": ["씨에스알", "csr"],
+      "category": "웹개발",
+      "definition": "Client Side Rendering의 약자로, 브라우저(클라이언트)에서 JavaScript로 HTML을 만드는 방식입니다. 초기 로딩은 느리지만 이후 페이지 전환이 빠릅니다. React의 기본 렌더링 방식입니다.",
+      "analogy": "마치 밀키트(요리 재료 세트)를 받아서 집에서 요리하는 것과 같아요. 재료(JavaScript)를 받아와서 내 집(브라우저)에서 직접 요리(HTML 생성)를 하는 것처럼요.",
+      "example": "// React CSR 예시 (use client)\n'use client';\nimport { useState, useEffect } from 'react';\nfunction Posts() {\n  const [posts, setPosts] = useState([]);\n  useEffect(() => { fetch('/api/posts').then(r => r.json()).then(setPosts); }, []);\n}",
+      "related": ["SSR", "SPA", "클라이언트"]
+    },
+    {
+      "id": "spa",
+      "term": "SPA",
+      "aliases": ["에스피에이", "spa"],
+      "category": "웹개발",
+      "definition": "Single Page Application의 약자로, 하나의 HTML 페이지에서 모든 화면 전환이 이루어지는 웹 애플리케이션입니다. 페이지를 새로 불러오지 않고 필요한 부분만 업데이트합니다. 부드러운 사용자 경험을 제공합니다.",
+      "analogy": "마치 한 권의 스케치북과 같아요. 새 종이(페이지)를 꺼내는 게 아니라, 같은 종이 위에서 지우고 다시 그리는 것처럼, SPA는 하나의 페이지에서 내용만 바꿔가며 보여줘요.",
+      "example": "// SPA에서 페이지 전환 (React Router)\nimport { BrowserRouter, Route } from 'react-router-dom';\n// <Route path=\"/\" element={<Home />} />\n// <Route path=\"/about\" element={<About />} />\n// 페이지 새로고침 없이 화면 전환!",
+      "related": ["CSR", "라우팅", "React"]
+    },
+    {
+      "id": "dom",
+      "term": "DOM",
+      "aliases": ["돔", "dom"],
+      "category": "웹개발",
+      "definition": "Document Object Model의 약자로, HTML 문서를 JavaScript가 이해할 수 있는 객체 구조로 표현한 것입니다. DOM을 통해 JavaScript로 웹페이지의 내용을 동적으로 변경할 수 있습니다. 트리(나무) 형태의 구조를 가집니다.",
+      "analogy": "마치 가계도(족보)와 같아요. 할아버지 아래에 아버지, 아버지 아래에 나처럼 계층 구조로 되어있는 것처럼, DOM도 html 아래에 body, body 아래에 div 같은 계층 구조로 되어있어요.",
+      "example": "// DOM으로 웹페이지 조작하기\nlet title = document.getElementById('title');\ntitle.textContent = '새로운 제목';\ntitle.style.color = 'red';\nconsole.log(title.parentElement);",
+      "related": ["HTML", "JavaScript", "React"]
+    },
+    {
+      "id": "json",
+      "term": "JSON",
+      "aliases": ["제이슨", "json"],
+      "category": "웹개발",
+      "definition": "JavaScript Object Notation의 약자로, 데이터를 저장하고 주고받기 위한 텍스트 형식입니다. 사람이 읽기 쉽고 컴퓨터가 처리하기도 좋습니다. API 통신에서 가장 많이 사용되는 데이터 형식입니다.",
+      "analogy": "마치 택배 송장과 같아요. 보내는 사람, 받는 사람, 주소, 물건 이름 등이 정해진 형식으로 적혀있어서 누구나 읽고 이해할 수 있는 것처럼, JSON도 정해진 형식으로 데이터를 담아요.",
+      "example": "let jsonData = {\n  \"name\": \"민수\",\n  \"age\": 13,\n  \"hobbies\": [\"코딩\", \"게임\"]\n};\nconsole.log(JSON.stringify(jsonData));",
+      "related": ["API", "객체", "REST API"]
+    },
+    {
+      "id": "rest-api",
+      "term": "REST API",
+      "aliases": ["레스트에이피아이", "rest-api"],
+      "category": "웹개발",
+      "definition": "웹에서 데이터를 주고받는 표준 규칙입니다. HTTP 메서드(GET, POST, PUT, DELETE)를 사용하여 데이터를 조회, 생성, 수정, 삭제합니다. URL로 자원을 구분하고 JSON으로 데이터를 주고받습니다.",
+      "analogy": "마치 도서관의 대출/반납 시스템과 같아요. 책을 빌리려면(GET) 대출 신청을, 새 책을 등록하려면(POST) 등록 양식을, 정보를 수정하려면(PUT) 수정 양식을 작성하는 것처럼 정해진 규칙이 있어요.",
+      "example": "// REST API 사용 예시\nfetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ name: '민수', age: 13 })\n});",
+      "related": ["API", "JSON", "서버"]
+    },
+    {
+      "id": "webhook",
+      "term": "웹훅 (Webhook)",
+      "aliases": ["웹훅", "webhook"],
+      "category": "웹개발",
+      "definition": "특정 이벤트가 발생했을 때 자동으로 다른 서비스에 알려주는 방식입니다. 일반 API와 달리 요청하지 않아도 이벤트가 생기면 알아서 데이터를 보내줍니다. 실시간 알림에 많이 사용됩니다.",
+      "analogy": "마치 택배 알림 서비스와 같아요. 매번 '택배 왔나요?' 하고 물어볼(API 요청) 필요 없이, 택배가 도착하면 자동으로 문자(웹훅)가 오는 것처럼요.",
+      "example": "// 웹훅 수신 서버 예시 (Express)\nconst express = require('express');\nconst app = express();\napp.post('/webhook', (req, res) => {\n  console.log('이벤트 수신:', req.body);\n  res.status(200).send('OK');\n});",
+      "related": ["API", "서버", "배포"]
+    },
+    {
+      "id": "deploy",
+      "term": "배포 (Deploy)",
+      "aliases": ["배포", "deploy"],
+      "category": "웹개발",
+      "definition": "개발이 완료된 프로그램을 실제 사용자가 접근할 수 있도록 서버에 올리는 과정입니다. Vercel, Netlify, AWS 등의 서비스를 사용합니다. 배포 후에는 누구나 웹사이트에 접속할 수 있습니다.",
+      "analogy": "마치 책을 출판하는 것과 같아요. 원고(코드)를 다 쓰고 나면 출판사(서버)를 통해 책(웹사이트)을 세상에 내놓아서 누구나 읽을 수 있게 하는 것처럼요.",
+      "example": "// Vercel로 배포하기\n// 터미널에서:\n// npm run build\n// vercel --prod\nconsole.log(\"내 웹사이트가 세상에 공개되었어요!\");\nconsole.log(\"https://my-app.vercel.app\");",
+      "related": ["서버", "클라우드", "도커"]
+    },
+    {
+      "id": "database",
+      "term": "데이터베이스 (Database)",
+      "aliases": ["데이터베이스", "database"],
+      "category": "데이터AI",
+      "definition": "데이터를 체계적으로 저장하고 관리하는 시스템입니다. 표(테이블) 형태로 데이터를 정리하며, 빠르게 검색하고 수정할 수 있습니다. MySQL, PostgreSQL, MongoDB 등이 대표적입니다.",
+      "analogy": "마치 거대한 엑셀 파일과 같아요. 학생 명부처럼 이름, 나이, 반 등의 정보를 표로 정리해서 저장하고, 원하는 정보를 빠르게 찾아볼 수 있는 것처럼요.",
+      "example": "// JavaScript에서 데이터베이스 사용\nconst db = require('better-sqlite3')('school.db');\ndb.exec('CREATE TABLE students (name TEXT, age INTEGER)');\ndb.prepare('INSERT INTO students VALUES (?, ?)').run('민수', 13);",
+      "related": ["SQL", "스키마", "쿼리"]
+    },
+    {
+      "id": "sql",
+      "term": "SQL",
+      "aliases": ["에스큐엘", "sql"],
+      "category": "데이터AI",
+      "definition": "Structured Query Language의 약자로, 데이터베이스에 명령을 내리는 언어입니다. 데이터를 조회(SELECT), 추가(INSERT), 수정(UPDATE), 삭제(DELETE)할 수 있습니다. 관계형 데이터베이스의 표준 언어입니다.",
+      "analogy": "마치 도서관 사서에게 하는 말과 같아요. '과학 책 중에서 2024년에 나온 것을 찾아주세요'라고 요청하면 사서가 찾아주는 것처럼, SQL로 데이터베이스에 원하는 데이터를 요청해요.",
+      "example": "// SQL 쿼리 예시 (JavaScript에서 실행)\nconst results = db.prepare(\n  'SELECT name, age FROM students WHERE age >= 13'\n).all();\nconsole.log(results);",
+      "related": ["데이터베이스", "쿼리", "NoSQL"]
+    },
+    {
+      "id": "nosql",
+      "term": "NoSQL",
+      "aliases": ["노에스큐엘", "nosql"],
+      "category": "데이터AI",
+      "definition": "전통적인 표(테이블) 형식이 아닌 다양한 형태로 데이터를 저장하는 데이터베이스입니다. JSON과 비슷한 문서 형태로 저장하는 MongoDB가 대표적입니다. 유연한 구조로 빠르게 개발할 수 있습니다.",
+      "analogy": "마치 자유형식 노트와 같아요. 정해진 칸이 있는 표(SQL)와 달리, 자유롭게 메모하는 노트(NoSQL)처럼 데이터의 형태가 유연해서 어떤 형식이든 자유롭게 저장할 수 있어요.",
+      "example": "// MongoDB (NoSQL) 사용 예시\nconst doc = {\n  name: \"민수\",\n  hobbies: [\"코딩\", \"축구\"],\n  address: { city: \"서울\", district: \"강남\" }\n};\n// collection.insertOne(doc);",
+      "related": ["SQL", "데이터베이스", "JSON"]
+    },
+    {
+      "id": "schema",
+      "term": "스키마 (Schema)",
+      "aliases": ["스키마", "schema"],
+      "category": "데이터AI",
+      "definition": "데이터베이스의 구조와 규칙을 정의한 설계도입니다. 어떤 데이터를 어떤 형식으로 저장할지 미리 정합니다. 테이블 이름, 열(컬럼) 이름, 데이터 타입 등을 포함합니다.",
+      "analogy": "마치 신청서 양식과 같아요. '이름은 한글로, 나이는 숫자로, 이메일은 @가 포함된 형식으로' 작성 규칙이 정해져 있는 것처럼, 스키마는 데이터의 저장 규칙을 정해놓아요.",
+      "example": "// Prisma 스키마 예시 (JavaScript/TypeScript)\n// schema.prisma 파일:\n// model User {\n//   id    Int    @id @default(autoincrement())\n//   name  String\n//   email String @unique\n// }\nconsole.log(\"스키마로 DB 구조를 설계해요!\");",
+      "related": ["데이터베이스", "SQL", "쿼리"]
+    },
+    {
+      "id": "query",
+      "term": "쿼리 (Query)",
+      "aliases": ["쿼리", "query"],
+      "category": "데이터AI",
+      "definition": "데이터베이스에 보내는 요청 또는 질문입니다. 데이터를 찾거나, 추가하거나, 수정하거나, 삭제할 때 쿼리를 작성합니다. SQL 문법으로 작성하며, 프로그래밍 언어에서 실행할 수 있습니다.",
+      "analogy": "마치 검색창에 입력하는 검색어와 같아요. 인터넷에서 '맛집'을 검색하면 관련 결과가 나오는 것처럼, 쿼리를 보내면 데이터베이스에서 원하는 데이터를 찾아서 돌려줘요.",
+      "example": "// 쿼리 예시\nconst query = 'SELECT * FROM products WHERE price < 10000';\nconst results = db.prepare(query).all();\nconsole.log(\"검색 결과:\", results.length, \"개\");",
+      "related": ["SQL", "데이터베이스", "스키마"]
+    },
+    {
+      "id": "api-key",
+      "term": "API 키 (API Key)",
+      "aliases": ["에이피아이키", "api-key"],
+      "category": "데이터AI",
+      "definition": "API를 사용할 수 있는 권한을 증명하는 고유한 비밀 코드입니다. 서비스에 가입하면 발급받을 수 있으며, 요청할 때마다 이 키를 함께 보냅니다. 절대 다른 사람에게 공개해서는 안 됩니다.",
+      "analogy": "마치 아파트 출입카드와 같아요. 카드(API 키)가 있어야 건물(서비스)에 들어갈 수 있고, 카드를 잃어버리면 다른 사람이 들어올 수 있으니 잘 보관해야 하는 것처럼요.",
+      "example": "// API 키 사용 예시\nconst API_KEY = process.env.API_KEY;\nfetch('https://api.example.com/data', {\n  headers: { 'Authorization': 'Bearer ' + API_KEY }\n});",
+      "related": ["API", "환경변수", "서버"]
+    },
+    {
+      "id": "env-variable",
+      "term": "환경변수 (Environment Variable)",
+      "aliases": ["환경변수", "env-variable"],
+      "category": "데이터AI",
+      "definition": "프로그램 외부에서 설정하는 값으로, 비밀번호나 API 키 같은 민감한 정보를 코드와 분리하여 관리합니다. .env 파일에 저장하며, process.env로 접근합니다. Git에 올리지 않도록 주의해야 합니다.",
+      "analogy": "마치 비밀 금고와 같아요. 중요한 보석(API 키, 비밀번호)을 책상 위(코드 안)에 두지 않고 금고(.env 파일)에 넣어두는 것처럼, 민감한 정보를 안전하게 보관해요.",
+      "example": "// .env 파일\n// DATABASE_URL=postgres://localhost:5432/mydb\n// API_KEY=sk-abc123\n\nconst dbUrl = process.env.DATABASE_URL;\nconsole.log(\"DB 연결:\", dbUrl);",
+      "related": ["API 키", "배포", "서버"]
+    },
+    {
+      "id": "server",
+      "term": "서버 (Server)",
+      "aliases": ["서버", "server"],
+      "category": "데이터AI",
+      "definition": "클라이언트의 요청을 받아서 처리하고 응답을 보내주는 컴퓨터 또는 프로그램입니다. 웹사이트의 데이터를 저장하고, 사용자가 접속하면 필요한 정보를 전달합니다. 24시간 켜져 있어야 합니다.",
+      "analogy": "마치 식당의 주방과 같아요. 손님(클라이언트)이 주문(요청)하면 주방(서버)에서 음식(데이터)을 만들어서 가져다주는 것처럼, 서버는 요청을 받으면 결과를 만들어 보내줘요.",
+      "example": "const express = require('express');\nconst app = express();\napp.get('/hello', (req, res) => {\n  res.json({ message: '안녕하세요!' });\n});\napp.listen(3000);",
+      "related": ["클라이언트", "백엔드", "API"]
+    },
+    {
+      "id": "client",
+      "term": "클라이언트 (Client)",
+      "aliases": ["클라이언트", "client"],
+      "category": "데이터AI",
+      "definition": "서버에 요청을 보내고 응답을 받는 쪽입니다. 웹 브라우저(Chrome, Safari 등)가 대표적인 클라이언트입니다. 사용자가 직접 보고 상호작용하는 부분을 담당합니다.",
+      "analogy": "마치 식당의 손님과 같아요. 손님(클라이언트)이 메뉴를 보고 주문(요청)하면, 주방(서버)에서 음식(데이터)을 만들어 가져다주는 것처럼요.",
+      "example": "// 클라이언트에서 서버에 요청 보내기\nfetch('http://localhost:3000/hello')\n  .then(res => res.json())\n  .then(data => {\n    console.log(data.message);\n  });",
+      "related": ["서버", "프론트엔드", "CSR"]
+    },
+    {
+      "id": "frontend",
+      "term": "프론트엔드 (Frontend)",
+      "aliases": ["프론트엔드", "frontend"],
+      "category": "데이터AI",
+      "definition": "사용자가 직접 보고 상호작용하는 웹사이트의 앞면입니다. HTML, CSS, JavaScript를 사용하여 화면을 구성합니다. React, Vue, Angular 같은 프레임워크로 개발합니다.",
+      "analogy": "마치 가게의 매장(홀)과 같아요. 손님이 직접 들어와서 보고, 만지고, 고르는 공간이 매장(프론트엔드)인 것처럼, 사용자가 직접 보고 클릭하는 화면 부분이에요.",
+      "example": "// 프론트엔드 코드 예시 (React)\nfunction App() {\n  return (\n    <div>\n      <h1>쇼핑몰</h1>\n      <button>장바구니 담기</button>\n    </div>\n  );\n}",
+      "related": ["백엔드", "React", "HTML"]
+    },
+    {
+      "id": "backend",
+      "term": "백엔드 (Backend)",
+      "aliases": ["백엔드", "backend"],
+      "category": "데이터AI",
+      "definition": "사용자 눈에 보이지 않는 서버 쪽의 로직을 담당하는 부분입니다. 데이터베이스 관리, 인증, 비즈니스 로직 처리 등을 수행합니다. Node.js, Python, Java 등으로 개발합니다.",
+      "analogy": "마치 가게의 창고와 사무실과 같아요. 손님 눈에는 안 보이지만, 물건 재고를 관리하고 회계를 처리하는 곳(백엔드)이 있어야 가게가 운영되는 것처럼요.",
+      "example": "// 백엔드 코드 예시 (Express)\napp.post('/api/order', async (req, res) => {\n  const { product, quantity } = req.body;\n  await db.insert({ product, quantity });\n  res.json({ success: true });\n});",
+      "related": ["프론트엔드", "서버", "데이터베이스"]
+    },
+    {
+      "id": "fullstack",
+      "term": "풀스택 (Fullstack)",
+      "aliases": ["풀스택", "fullstack"],
+      "category": "데이터AI",
+      "definition": "프론트엔드와 백엔드를 모두 다루는 것을 말합니다. 풀스택 개발자는 화면부터 서버, 데이터베이스까지 전체를 개발할 수 있습니다. Next.js 같은 풀스택 프레임워크가 이를 쉽게 만들어 줍니다.",
+      "analogy": "마치 혼자서 식당을 운영하는 것과 같아요. 요리(백엔드)도 하고, 홀 서빙(프론트엔드)도 하고, 메뉴 구성(기획)도 하는 것처럼, 풀스택은 웹 개발의 모든 부분을 다루는 거예요.",
+      "example": "// Next.js 풀스택 예시\n// 프론트엔드: app/page.js\n// 백엔드: app/api/users/route.js\nexport async function GET() {\n  const users = await db.query('SELECT * FROM users');\n  return Response.json(users);\n}",
+      "related": ["프론트엔드", "백엔드", "Next.js"]
+    },
+    {
+      "id": "debugging",
+      "term": "디버깅 (Debugging)",
+      "aliases": ["디버깅", "debugging"],
+      "category": "데이터AI",
+      "definition": "프로그램의 오류(버그)를 찾아서 고치는 과정입니다. console.log로 값을 확인하거나 디버거 도구를 사용합니다. 개발 시간의 상당 부분을 디버깅에 사용하는 만큼 중요한 기술입니다.",
+      "analogy": "마치 탐정이 범인을 찾는 것과 같아요. 단서(오류 메시지)를 모으고, 용의자(코드)를 하나하나 조사하고, 범인(버그)을 찾아서 해결하는 과정이 디버깅이에요.",
+      "example": "// 디버깅 예시\nfunction add(a, b) {\n  console.log('a의 값:', a);\n  console.log('b의 값:', b);\n  return a + b;\n}\nconsole.log('결과:', add(3, '5'));",
+      "related": ["콘솔", "IDE", "터미널"]
+    },
+    {
+      "id": "console",
+      "term": "콘솔 (Console)",
+      "aliases": ["콘솔", "console"],
+      "category": "데이터AI",
+      "definition": "프로그램의 실행 결과나 오류 메시지를 확인할 수 있는 출력 창입니다. 브라우저의 개발자 도구(F12)에서 확인할 수 있습니다. console.log()는 가장 기본적인 디버깅 도구입니다.",
+      "analogy": "마치 실험실의 현미경과 같아요. 눈에 보이지 않는 세균(코드의 내부 동작)을 현미경(콘솔)으로 확대해서 관찰할 수 있는 것처럼, 콘솔로 코드가 어떻게 동작하는지 들여다봐요.",
+      "example": "console.log('일반 메시지');\nconsole.warn('경고 메시지');\nconsole.error('에러 메시지');\nconsole.table([{name: '민수', age: 13}]);",
+      "related": ["디버깅", "터미널", "JavaScript"]
+    },
+    {
+      "id": "terminal",
+      "term": "터미널 (Terminal)",
+      "aliases": ["터미널", "terminal"],
+      "category": "데이터AI",
+      "definition": "텍스트 명령어로 컴퓨터를 조작하는 프로그램입니다. 파일 관리, 프로그램 실행, Git 명령어 등을 수행합니다. VS Code에 내장되어 있으며, 개발자에게 필수적인 도구입니다.",
+      "analogy": "마치 마법사의 주문서와 같아요. 마우스로 클릭하는 대신 텍스트 명령어(주문)를 입력하면 컴퓨터가 그대로 실행하는 것처럼, 터미널은 글자로 컴퓨터에 명령을 내리는 도구예요.",
+      "example": "// 터미널 명령어 예시\n// ls - 파일 목록 보기\n// cd my-project - 폴더 이동\n// npm install - 패키지 설치\n// node app.js - 프로그램 실행\nconsole.log(\"터미널에서 명령어를 입력해요!\");",
+      "related": ["CLI", "IDE", "Git"]
+    },
+    {
+      "id": "cli",
+      "term": "CLI",
+      "aliases": ["씨엘아이", "cli"],
+      "category": "데이터AI",
+      "definition": "Command Line Interface의 약자로, 텍스트 명령어로 프로그램을 조작하는 인터페이스입니다. 마우스 대신 키보드로 명령을 입력합니다. npm, git, docker 등이 CLI 기반 도구입니다.",
+      "analogy": "마치 문자 메시지로 주문하는 것과 같아요. 앱(GUI)에서 버튼을 눌러 주문하는 대신, 문자(CLI)로 '아메리카노 1잔'이라고 보내서 주문하는 것처럼, 글자로 명령을 내리는 방식이에요.",
+      "example": "// CLI 도구 사용 예시\n// npx create-next-app my-app (프로젝트 생성)\n// git status (상태 확인)\n// docker ps (컨테이너 목록)\nconsole.log(\"CLI는 텍스트로 명령해요!\");",
+      "related": ["터미널", "npm", "Git"]
+    },
+    {
+      "id": "docker",
+      "term": "도커 (Docker)",
+      "aliases": ["도커", "docker"],
+      "category": "데이터AI",
+      "definition": "애플리케이션과 실행 환경을 하나의 컨테이너로 묶어서 어디서든 동일하게 실행할 수 있게 해주는 도구입니다. '내 컴퓨터에서는 되는데...' 같은 문제를 해결합니다. 배포와 서버 관리를 쉽게 만들어 줍니다.",
+      "analogy": "마치 도시락과 같아요. 밥, 반찬, 숟가락을 도시락 통(컨테이너)에 넣으면 어디서든 같은 식사를 할 수 있는 것처럼, 도커는 프로그램과 필요한 모든 것을 하나로 묶어서 어디서든 똑같이 실행돼요.",
+      "example": "// Dockerfile 예시\n// FROM node:18\n// WORKDIR /app\n// COPY . .\n// RUN npm install\n// CMD [\"node\", \"app.js\"]\nconsole.log(\"도커로 어디서든 실행 가능!\");",
+      "related": ["배포", "서버", "클라우드"]
+    },
+    {
+      "id": "cloud",
+      "term": "클라우드 (Cloud)",
+      "aliases": ["클라우드", "cloud"],
+      "category": "데이터AI",
+      "definition": "인터넷을 통해 서버, 저장소, 데이터베이스 등의 컴퓨팅 자원을 빌려 쓰는 서비스입니다. AWS, Google Cloud, Azure가 대표적입니다. 직접 서버를 사지 않아도 필요한 만큼 사용하고 비용을 낼 수 있습니다.",
+      "analogy": "마치 렌터카 서비스와 같아요. 차(서버)를 직접 사지 않고 필요할 때만 빌려서 쓰고, 사용한 만큼만 비용을 내는 것처럼, 클라우드는 컴퓨터 자원을 필요한 만큼 빌려서 사용하는 거예요.",
+      "example": "// AWS S3에 파일 업로드 예시\nconst AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\ns3.putObject({\n  Bucket: 'my-bucket',\n  Key: 'photo.jpg',\n  Body: fileData\n});",
+      "related": ["서버", "배포", "도커"]
+    },
+    {
+      "id": "prompt",
+      "term": "프롬프트 (Prompt)",
+      "aliases": ["프롬프트", "prompt"],
+      "category": "데이터AI",
+      "definition": "AI 모델에게 원하는 결과를 얻기 위해 입력하는 지시문입니다. 프롬프트를 어떻게 작성하느냐에 따라 AI의 응답 품질이 달라집니다. 프롬프트 엔지니어링은 AI 시대의 핵심 기술입니다.",
+      "analogy": "마치 요리 주문서와 같아요. '매운맛으로, 양은 많이, 파는 빼주세요'처럼 구체적으로 주문할수록 원하는 음식이 나오는 것처럼, AI에게도 구체적으로 요청할수록 좋은 결과가 나와요.",
+      "example": "// AI API에 프롬프트 보내기\nconst response = await fetch('https://api.openai.com/v1/chat/completions', {\n  method: 'POST',\n  body: JSON.stringify({\n    messages: [{ role: 'user', content: '자바스크립트 배열을 설명해줘' }]\n  })\n});",
+      "related": ["LLM", "API", "API 키"]
+    },
+    {
+      "id": "llm",
+      "term": "LLM",
+      "aliases": ["엘엘엠", "llm"],
+      "category": "데이터AI",
+      "definition": "Large Language Model의 약자로, 방대한 양의 텍스트 데이터를 학습한 대규모 언어 모델입니다. ChatGPT, Claude, Gemini 등이 대표적입니다. 자연어를 이해하고 생성하며, 코딩 도우미로도 활용됩니다.",
+      "analogy": "마치 모든 책을 읽은 천재 학생과 같아요. 도서관의 모든 책을 읽고 내용을 기억하는 학생(LLM)에게 질문하면, 배운 지식을 바탕으로 대답해주는 것처럼, LLM은 엄청난 양의 글을 학습해서 대화할 수 있어요.",
+      "example": "// LLM API 사용 예시\nconst result = await fetch('/api/chat', {\n  method: 'POST',\n  body: JSON.stringify({\n    prompt: '피보나치 수열 코드를 작성해줘'\n  })\n});\nconst answer = await result.json();",
+      "related": ["프롬프트", "API", "API 키"]
+    }
+  ]
+}
